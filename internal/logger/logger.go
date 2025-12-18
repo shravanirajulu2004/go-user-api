@@ -1,0 +1,34 @@
+// internal/logger/logger.go
+package logger
+
+import (
+	"go.uber.org/zap"
+	"go.uber.org/zap/zapcore"
+)
+
+var Log *zap.Logger
+
+func Init(env string) error {
+	var err error
+	var config zap.Config
+
+	if env == "production" {
+		config = zap.NewProductionConfig()
+	} else {
+		config = zap.NewDevelopmentConfig()
+		config.EncoderConfig.EncodeLevel = zapcore.CapitalColorLevelEncoder
+	}
+
+	Log, err = config.Build()
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func Sync() {
+	if Log != nil {
+		Log.Sync()
+	}
+}
