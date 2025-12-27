@@ -2,8 +2,8 @@
 
 A production-ready RESTful API built with **Go**, **Fiber**, **PostgreSQL**, and **SQLC** for managing users with **dynamic age calculation**.
 
-**Developed for:** Ainyx Solutions - Software Engineering Intern Role  
-**Author:** Shravani H.G
+ 
+
 
 ---
 
@@ -367,19 +367,5 @@ Potential improvements for production deployment:
 
 ---
 
-## 📊 Task Requirements Compliance
 
-| Requirement | Status |
-|-------------|--------|
-| Store DOB in database | ✅ |
-| Calculate age dynamically | ✅ |
-| Use SQLC | ✅ |
-| Validate with go-playground/validator | ✅ |
-| Log with Uber Zap | ✅ |
-| Clean HTTP status codes | ✅ |
-| Unit tests | ✅ |
-| Request ID middleware | ✅ |
-| Request duration logging | ✅ |
-
-**Score:** 6/6 core requirements + 3/5 bonus features ✅
 
